@@ -26,7 +26,7 @@ public class CartServiceImpl implements CartService{
 
 	public CartEntity findCartById(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return cartRepository.findOne(id);
 	}
 
 	public List<CartEntity> findAllCarts() {
