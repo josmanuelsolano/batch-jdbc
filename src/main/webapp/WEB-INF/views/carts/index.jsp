@@ -11,7 +11,7 @@
 <body style="font-family: sans-serif;">
 	<h3 style="color: blue; font-family: sans-serif;">Cart List:</h3>
 	
-	<a href="<c:url value="/jsp/cart/add.jsp"/>">Add Cart</a> --- 
+	<a href="<c:url value="/"/>">Add Cart</a> --- 
 	<a href="<c:url value="/"/>">Return to Index</a>
 	<br/><br/>
 	
@@ -29,7 +29,7 @@
 		</tr>
 		<c:forEach var="cart" items="${carts}">
 			<tr>
-				<td><a href="/batch-jdbc/carts/${cart.id}"><fmt:formatNumber pattern="000" value="${cart.id}"/></a></td>
+				<td><a href="/batch-jdbc/carts/show/${cart.id}"><fmt:formatNumber pattern="000" value="${cart.id}"/></a></td>
 				<td><fmt:formatNumber pattern="$ #,##0.00" value="${cart.linesAmount}" /></td>
 				<td><fmt:formatNumber pattern="$ #,##0.00" value="${cart.shippingAmount}" /></td>
 				<td><fmt:formatNumber pattern="$ #,##0.00" value="${cart.cartAmount}" /></td>

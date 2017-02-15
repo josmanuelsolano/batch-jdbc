@@ -21,15 +21,15 @@ public class CartController {
 	@Autowired
 	private CartService cartService;
 	
-	@RequestMapping(value="", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String listCart(Model model){
 		List<CartEntity> carts = cartService.findAllCarts();
 		model.addAttribute("carts", carts);
-		return "carts/list";
+		return "carts/index";
 		
 	}
 	
-	@RequestMapping(value="/{cartId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/show/{cartId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ModelAndView showCart(@PathVariable("cartId") Long cartId){
 		ModelAndView model = new ModelAndView("carts/edit");
 		model.addObject("cart", cartService.findCartById(cartId));

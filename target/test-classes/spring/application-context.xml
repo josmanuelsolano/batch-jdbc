@@ -13,7 +13,7 @@
 	<context:annotation-config />
 	
 	<!-- JDBC DATASOURCE -->
-	<import resource="classpath:META-INF/spring/jdbc/Spring-Datasource.xml"/>
+	<import resource="META-INF/spring/jdbc/Spring-Datasource.xml"/>
 	
 	<context:component-scan base-package="com.stk.academy.batch.jdbc.services" />
 	<context:component-scan base-package="com.stk.academy.batch.jdbc.repositories" />

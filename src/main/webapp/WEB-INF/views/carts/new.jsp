@@ -70,6 +70,6 @@
 	<div>${msg}</div>
 	
 	<br>
-	<a href="<c:url value="/carts/list"/>">Return to List</a>
+	<a href="<c:url value="/carts"/>">Return to List</a>
 </body>
 </html>
